@@ -10,6 +10,7 @@
 \usepackage{graphicx}
 \usepackage{url} % príkaz \url na formátovanie URL
 \usepackage{hyperref} % odkazy v texte budú aktívne (pri niektorých triedach dokumentov spôsobuje posun textu)
+\usepackage[table]{xcolor}
 
 \usepackage{cite}
 %\usepackage{times}
@@ -33,23 +34,22 @@
 \maketitle
 
 \begin{abstract}
-Treba dopísať
+Kedysi v minulosti boli slová „práca“ a „zábava“ nezlučiteľné. No v dnešnej modernej dobe nie je vôbec prekvapujúce, že sa jav akým je gamifikácia dostal aj do pracovnej sféry. Čo to však znamená? 
+Tento článok je zameraný na to, čo je vlastne gamifikácia, aké sú jej základné elementy a ako by mala byť úspešne implementovaná do pracovného prostredia. Konkrétnejšie sa bude zaoberať otázkou, aké klady a aké zápory môže gamifikácia priniesť pre zamestnancov alebo samotný podnik, v ktorom je aplikovaná.
+
+
 \end{abstract}
 
 
 
 \section{Úvod}
 
-Motivujte čitateľa a vysvetlite, o čom píšete. Úvod sa väčšinou nedelí na časti.
+Prvý bod mojej práce bolo preskúmanie danej oblasti~\ref{stav}. Následne som definoval základné pojmy, ktoré sa v mojej práci vyskytujú~\ref{definície}. Tieto pojmy som po ich definovaní rozobral na prvky v časti~\ref{prvky} a hlavnú problematiku článku som priblížil v časti~\ref{dopad}. V ďalšej časti~\ref{prednasky} môjho článku som sa venoval témam z prednášok.
+\\ Krátke zhrnutie všetkého sa nachádza v závere mojej práci~\ref{zaver}.
 
-%Uveďte explicitne štruktúru článku. Tu je nejaký príklad.
-%Základný problém, ktorý bol naznačený v úvode, je podrobnejšie vysvetlený v časti~\ref{nejaka}.
-%Dôležité súvislosti sú uvedené v častiach~\ref{dolezita} a~\ref{dolezitejsia}.
-%Záverečné poznámky prináša časť~\ref{zaver}.
+\section{Stav v skúmanej oblasti}\label{stav} 
 
-\section{Stav v skúmanej oblasti} \label{stav}
-
-Počas skúmania mojej vybranej oblasti som zistil, že jej stav preskúmania odborníkmi a stav spracovania do odbornej literatúry je podľa môjho názoru podpriemerný. Myslím si, že je to kvôli tomu, že daná problematika je stále relatívne nová. Napriek tomu sa mi podarilo nájsť niekoľko článkov, ktoré som pozorne preštudoval, a na ktoré sa v mojom článku odkazujem. 
+Počas skúmania vybranej oblasti sme zistili, že jej stav preskúmania odborníkmi a stav spracovania do odbornej literatúry je podľa nášho názoru podpriemerný. Myslíme si, že je to kvôli tomu, že daná problematika je stále relatívne nová. Napriek tomu sa nám podarilo nájsť niekoľko článkov, ktoré sme pozorne preštudovali, a na ktoré sa v našom článku odkazujeme~\ref{referencie}. 
 
 \subsection{Výsledky systematického prehľadu} 
 Na danú tému sa mi podarilo nájsť starší ale veľmi podrobný systematický prehľad literatúry, ktorý mi umožnil získať aspoň približné čísla, ktoré môj názor potvrdzujú\cite{10.1007/978-3-319-56541-5_29}.Tento prehľad bol publikovaný v roku 2017 a zaoberal sa článkami, ktoré sa týkali gamifikácie v pracovnom prostredí. Podľa neho bolo na danú tému nájdených 586 článkov od roku 2005. Žiaľ iba 35 z nich bolo označených za relevantné články. Najstarší relevantný článok bol z roku 2011 čo opäť potvrdzuje môj názor, že ide o novú oblasť skúmania.
@@ -58,7 +58,7 @@ Na danú tému sa mi podarilo nájsť starší ale veľmi podrobný systematick�
 \begin{itemize}
 \item \textbf{Gamifikácia} Je proces vylepšovania služby
 možnosťami pre herné zážitky s cieľom podporiť používateľovu
-celkovú tvorbu hodnoty\cite{10.1145/2393132.2393137}. Môžem to definovať jednoduchšie ako implementáciu hry a herných prvkov ~\ref{prvky} do rôznych prostredí za účelom motivovania ľudí (v tomto prípade zamestnancov) a teda aj zlepšenia samotného (v tomto prípade pracovného) prostredia.
+celkovú tvorbu hodnoty\cite{10.1145/2393132.2393137}. Môžem to definovať jednoduchšie ako implementáciu hry a herných prvkov ~\ref{prvky} do rôznych prostredí za účelom motivovania ľudí (dettering 2011)(v tomto prípade zamestnancov) a teda aj zlepšenia samotného (v tomto prípade pracovného) prostredia.
 \item \textbf{Pracovné prostredie} V mojom článku budem veľmi všeobecne a veľmi jednoducho definovať pracovné prostredie ako akékoľvek prostredie, v ktorom prebieha práca vykonávaná ľudmi (zamestnancami).
 \item (možno ďalšie pojmy, ktoré sa v mojom článku vyskytnú a budú potrebovať vysvetlenie)
 \end{itemize}
@@ -66,13 +66,13 @@ celkovú tvorbu hodnoty\cite{10.1145/2393132.2393137}. Môžem to definovať jed
 
 %Z obr.~\ref{f:rozhod} je všetko jasné. 
 
-\begin{figure*}[tbh]
-\centering
+%\begin{figure*}[tbh]
+%\centering
 %\includegraphics[scale=1.0]{Diagram.pdf}
 %Aj text môže byť prezentovaný ako obrázok. Stane sa z neho označný plávajúci objekt. Po vytvorení diagramu zrušte znak \texttt{\%} pred príkazom %\verb|\includegraphics| označte tento riadok ako komentár (tiež pomocou znaku \texttt{\%}).
 %\caption{Rozhodujúci argument.}
 %\label{f:rozhod}
-\end{figure*}
+%\end{figure*}
 
 \section{Prvky gamifikácie a herné prvky} \label{prvky}
 
@@ -85,26 +85,52 @@ generovaných pre používateľov\cite{herne}. Inak povedané, je veľmi dôlež
 \subsection{Najčastejšie používané herné prvky} 
 Všetky prvky by bolo zrejme nemožné vymenovať. Pokúsil som sa však zapísať a stručne vysvetliť aspoň tie najdôležitejšie a najčastejšie sa vyskytujúce herné prvky, ktoré sa pri gamifikácii využívajú.
 \begin{itemize}
-\item \textbf{Body} 
+\item \textbf{Body} \\
 Sú to granulárne jednotky merania v gamifikácii. Toto je spôsob, akým systém uchováva počet akcií hráča, ktoré sa ho týkajú\cite{10.1007/978-3-642-39241-2_58}. Môžu fungovať aj ako herná mena, takže hráči ich môžu vymieňať za rôzne odmeny. Myslím si, že motivujúci faktor spočíva aj v zbieraní a hromadení týchto bodov.
-\item \textbf{Rebríček}
-Najjednoduchšie sa dá definovať ako zoznam hráčov (zamestnancov), v ktorom sa hráči môžu vzájomne porovnať a predbiehať. To znamená, že môže mať motivijúci, ale aj demotivujúci účinok.
-\item \textbf{Cieľ}
-Na to aby bola gamifikácia úspešná, je potrebné aby danú hru zamestnanci hrali čo najdlhšie a čo najviac. Najlepšie ako takéto niečo dosiahnuť je vytvoriť pre zamestnancov \textit{relevantný} cieľ, ktorý sa budú pokúšať dosiahnuť. Relevantným cieľom môže byť napríklad finančná odmena alebo posun vyššie v hierarchii pracovného prostredia.
-\item \textbf{Pravidlá}
+\item \textbf{Rebríček} \\
+Najjednoduchšie sa dá definovať ako zoznam alebo presnejšie povedané tabuľka hráčov (zamestnancov), v ktorom sa hráči môžu vzájomne porovnať a predbiehať. Toto znamená, že môže mať motivijúci, ale aj demotivujúci účinok.
+\\Veĺmi jednoduchý rebríček by mohol vyzerať tak ako je ukázané v tab.1 ~\ref{tabulka1}
+\item \textbf{Cieľ} \\
+Na to aby bola gamifikácia úspešná, je potrebné aby danú hru zamestnanci hrali čo najdlhšie a čo najviac. Najlepšie ako sa takéto niečo dosiahne, je vytvorenie \textit{relevantného} cieľa pre zamestnancov. Relevantným cieľom môže byť napríklad finančná odmena alebo posun vyššie v hierarchii pracovného prostredia.
+\item \textbf{Pravidlá}\\
 Podľa môjho názoru je to najdôležitejší prvok každej hry a teda aj gamifikácie. Ak nie sú presne definované pravidlá, tak vznikne chaos.
 \\Pravidlá hry spájajú mechaniku do toku, aby motivovali hráča k dosiahnutiu cieľa\cite{10.1007/978-3-642-39241-2_58}.
 \end{itemize}
+\vspace{0.5cm}
+
+\begin{center}
+\rowcolors{2}{green!100!yellow!20}{green!70!yellow!40}
+\begin{tabular}{|c c c|} 
+ \hline
+ Pozícia v rebríčku & Meno & Počet bodov \\ [0.5ex] 
+ \hline\hline
+ 1 & Peter & 129 \\ 
+ \hline
+ 2 & Ema & 115 \\
+ \hline
+ 3 & Mária & 97 \\
+ \hline
+ 4 & Ján & 62 \\
+ \hline
+ 5 & Viktor & 45 \\ [1ex] 
+ \hline
+\end{tabular}
+\vspace{0.5cm}
+
+\label{tabulka1}
+tab.1
+\end{center}
 
 \section{Dopad gamifikácie na pracovné prostredie} \label{dopad}
+V tejto časti sa pokúsim priblížiť niečo čo považujem za hlavný problém v mnou skúmanej oblasti - ako ovplyvňuje gamifikácia pracovné prostredie? Zatiaľ je to aktívna oblasť výskumu a nebola teoreticky stanovená. K dispozícii je len obmedzený výskum skutočných konštrukčných postupov a nástrojov\cite{10.1145/2818187.2818299}.
 
+\subsection{Motivácia}
+Je podľa môjho názoru hlavný dôvod prečo zamestnávatelia používajú gamifikáciu. 
 
-
-
-\section{Ešte dôležitejšia časť} \label{dolezitejsia}
-
-\section{Pridaná sekcia}
-
+\section{Témy z prednášok} \label{prednasky}
+\paragraph{História informatiky}
+\paragraph{Technológia a ľudia}
+\paragraph{Udržateľnosť a etika}
 
 \section{Záver} \label{zaver} % prípadne iný variant názvu
 
@@ -114,6 +140,9 @@ Podľa môjho názoru je to najdôležitejší prvok každej hry a teda aj gamif
 
 
 % týmto sa generuje zoznam literatúry z obsahu súboru literatura.bib podľa toho, na čo sa v článku odkazujete
-\bibliography{Zdroj}
+\bibliography{Zdroj} 
 \bibliographystyle{abbrv} % prípadne alpha, abbrv alebo hociktorý iný
+\label{referencie}
 \end{document}
+%Motivačný element hier je niečo, čo je už všeobecne dlho známe a keď sa tento motivačný element aplikuje do pracovnej sféry, tak môže priniesť \textit{zázračné} výsledky. 
+%Keď si predstavíme slová \textit{práca} a \textit{hra}, tak iba veľmi ťažko si ich vieme spojiť dokopy. "Gamifikácia" je pojem, ktorý sa stáva v poslednom desaťročí stále populárnejší a vytvára most medzi týmito slovami. Práve na túto tému je zameraný tento článok. Obsahuje vysvetlenie tohoto pojmu a jeho aplikovanie v pracovnom prostredí. 
